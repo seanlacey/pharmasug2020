@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Adverse Event Swimmer's Plot</title>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script> 
+		<style type="text/css">
+			_mydelim READFILE inCSS;
+		</style>
+	</head>
+	
+	<body>
+		<header>
+			<h2>Plot of Adverse Events</h2>
+		</header>
+		<section class="wrapper">
+				<div id="selectDiv">
+					<h5>Choose Subject: </h5>
+					<select id="subjSelect">
+						_mydelim; %include subjOpts;
+						_mydelim newline;
+					</select>
+				</div>
+				<br>
+				<div id="basicInfo">
+					<table align="center">
+						<tr>
+							<td><strong>Subject ID:<strong></td>
+							<td id="tSubject"></td>
+							
+							<td width="5%"></td>
+							
+							<td><strong>Age:</strong></td>
+							<td id="tAge"></td>
+							
+							<td width="5%"></td>
+							
+							<td><strong>Treatment Start Date:<strong></td>
+							<td id="tTrtStart"></td>
+						</tr>
+						<tr>
+							<td><strong>Treatment Group:</strong></td>
+							<td id="tTrtGrp"></td>
+							
+							<td width="5%"></td>
+							
+							<td><strong>Sex:</strong></td>
+							<td id="tSex"></td>
+							
+							<td width="5%"></td>
+							
+							<td><strong>Treatment End Date:</strong></td>
+							<td id="tTrtEnd"></td>
+						</tr>
+					</table>
+				</div>
+				<br>
+				<div id="plot"></div>
+				<br>
+				<div id="initialInfo">
+					<strong>Click on an event to get more information.</strong>
+				</div>
+				<div id="aeInfo" class="hidden">
+					<table align="center">
+						<tr>
+							<td><strong>Adverse Event:</strong></td>
+							<td id="tAEDecod"></td>
+							
+							<td width="5%"></td>
+							
+							<td><strong>Start Date:</strong></td>
+							<td id="tAEStart"></td>
+						</tr>
+						<tr>
+							<td><strong>Toxicity Grade:</strong></td>
+							<td id="tAETox"></td>
+							
+							<td width="5%"></td>
+							
+							<td><strong>End Date:</strong></td>
+							<td id="tAEEnd"></td>
+						</tr>
+					</table>
+				</div>
+		</section>
+
+		<script type="text/javascript">
+			let aedata= _mydelim READFILE jsondata;;
+		
+			_mydelim READFILE inJS;
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+header{
+	text-align: center;
+}
+
+div#selectDiv{
+	text-align: center;
+}
+
+div#selectDiv select,
+div#selectDiv h5{
+	display: inline;
+}
+
+h5{
+	font-size: 1em;
+}
+
+div#plot{
+	text-align: center;
+}
+
+.axis{
+	font-size: 0.75em;
+}
+
+#initialInfo{
+	font-size: 1.25em;
+	text-align: center;
+}
+
+.hidden{
+	display: none;
+}
